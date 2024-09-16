@@ -12,7 +12,7 @@ const App = () => {
     <Router>
       <div className="overflow-x-hidden text-neutral-300 antialiased selection:bg-cyan-300 selection:text-cyan-900">
         {/* Background */}
-<div className="absolute inset-0 -z-10 h-full w-full bg-[#c4cfd9]"></div>
+<div className="absolute inset-0 -z-10 h-full w-full bg-[#c0d2e3]"></div>
 
 
         {/* Navbar */}

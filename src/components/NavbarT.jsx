@@ -17,7 +17,7 @@ const NavbarT = () => {
         <a href="/">
           <img className="mx-0.2 w-16 h-10 rounded-lg" src={logo} alt="logo" />
         </a>
-        <div className="text-lg text-white ml-2">
+        <div className="md:text-lg text-white ml-2">
           Association For <br />
           Computing Machinery
         </div>
@@ -29,7 +29,7 @@ const NavbarT = () => {
         </button>
       </div>
 
-      <div className={`hidden md:flex items-center justify-center gap-6 text-xl text-white`}>
+      <div className={`hidden md:flex px-8 items-center justify-center gap-6 text-xl text-white`}>
         <NavLink
           to="/"
           exact
