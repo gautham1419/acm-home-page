@@ -50,7 +50,7 @@ const About = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={controls}
       transition={{ duration: 0.8 }}
-      className="min-h-[570px] py-4 mx-1 pb-4 bg-slate-200 rounded-lg"
+      className="min-h-[570px] py-4 mx-1 pb-4 bg-slate-300 rounded-lg"
     >
       <h1 className="my-10 text-center text-4xl">
         <span className="text-neutral-500">About Us</span>
