@@ -13,7 +13,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative py-8 min-h-[415px] border-neutral-900 pb-4 lg:mb-35">
+    <div className="relative py-8 min-h-[435px] border-neutral-900 pb-4 lg:mb-35">
       <div className="absolute inset-0 flex flex-col items-center justify-center">
         <span
           className={`transition-opacity duration-1000 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'} text-7xl tracking-tight font-playfair bg-gradient-to-r from-blue-800 to-blue-700 bg-clip-text text-transparent`}
