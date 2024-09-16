@@ -5,7 +5,7 @@ import Home from './components/home';
 import Navbar from './components/Navbar';
 import NavbarT from './components/NavbarT';
 import Vision from './components/Vision';
-import Contact from './components/Contact'
+
 
 const App = () => {
   return (

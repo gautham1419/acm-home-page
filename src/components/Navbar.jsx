@@ -31,8 +31,8 @@ const Navbar = () => {
 
         <div id="contact" className="md:ml-40 py-2 flex items-center gap-8">
           <div id="contact" >
-            <div  className="text-lg py-1">Contact Us:</div>
-            <a href="mailto:acm@tkmce.ac.in" className="hover:underline">
+            <div  className="md:text-lg md:py-1">Contact Us:</div>
+            <a href="mailto:acm@tkmce.ac.in" className="hover:underline text-sm">
               acm@tkmce.ac.in
             </a>
           </div>

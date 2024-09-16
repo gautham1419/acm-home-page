@@ -13,7 +13,6 @@ const NavbarT = () => {
 
   return (
     <nav className="mb-10 flex items-center justify-between py-4 bg-gray-800">
-      {/* Logo and Title */}
       <div className="flex flex-shrink-0 items-center">
         <a href="/">
           <img className="mx-0.2 w-16 h-10 rounded-lg" src={logo} alt="logo" />
@@ -24,14 +23,12 @@ const NavbarT = () => {
         </div>
       </div>
 
-      {/* Hamburger Icon for mobile */}
       <div className="md:hidden">
         <button onClick={toggleMenu} className="text-white text-3xl">
           {isOpen ? <FaTimes /> : <FaBars />}
         </button>
       </div>
 
-      {/* Navigation Links for large screens */}
       <div className={`hidden md:flex items-center justify-center gap-6 text-xl text-white`}>
         <NavLink
           to="/"
@@ -73,7 +70,6 @@ const NavbarT = () => {
         </Link>
       </div>
 
-      {/* Mobile Navigation Links */}
       <div
         className={`${
           isOpen ? "block" : "hidden"

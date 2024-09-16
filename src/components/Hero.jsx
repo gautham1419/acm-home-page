@@ -1,21 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import './Hero.css'; // Ensure you have a CSS file for additional styles
+import './Hero.css'; 
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Trigger visibility after the component mounts
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 500); // Adjust the delay as needed
+    }, 500); 
 
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <div className="relative py-8 min-h-[415px] border-neutral-900 pb-4 lg:mb-35">
-      {/* Hero Content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center">
         <span
           className={`transition-opacity duration-1000 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'} text-7xl tracking-tight font-playfair bg-gradient-to-r from-blue-800 to-blue-700 bg-clip-text text-transparent`}
