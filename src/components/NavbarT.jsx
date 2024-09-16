@@ -1,12 +1,19 @@
-import { FaInstagram, FaGithub, FaLinkedin, FaSquareXTwitter } from "react-icons/fa6";
-import { NavLink } from "react-router-dom"; // For route navigation
-import { Link } from "react-scroll"; // For scrolling within the same page
+import React, { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { NavLink } from "react-router-dom"; 
+import { Link } from "react-scroll"; 
 import logo from "../assets/ACM-logo.png";
 
 const NavbarT = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <nav className="mb-10 flex items-center justify-between py-4 bg-gray-800">
-      {/* Left Section: Logo and Title */}
+      {/* Logo and Title */}
       <div className="flex flex-shrink-0 items-center">
         <a href="/">
           <img className="mx-0.2 w-16 h-10 rounded-lg" src={logo} alt="logo" />
@@ -17,9 +24,15 @@ const NavbarT = () => {
         </div>
       </div>
 
-      {/* Middle Section: Navigation Links */}
-      <div className="m-6 flex items-center justify-center gap-6 text-xl text-white">
-        {/* Links to different routes */}
+      {/* Hamburger Icon for mobile */}
+      <div className="md:hidden">
+        <button onClick={toggleMenu} className="text-white text-3xl">
+          {isOpen ? <FaTimes /> : <FaBars />}
+        </button>
+      </div>
+
+      {/* Navigation Links for large screens */}
+      <div className={`hidden md:flex items-center justify-center gap-6 text-xl text-white`}>
         <NavLink
           to="/"
           exact
@@ -42,23 +55,67 @@ const NavbarT = () => {
         >
           Events
         </NavLink>
-
-        {/* Scroll to About section on the home page */}
         <Link
-          to="about" // Matches the id of the section
+          to="about"
           smooth={true}
           duration={500}
           className="cursor-pointer hover:text-blue-400 transition duration-300"
         >
           About
         </Link>
-
-        {/* Link to Contact Us page */}
         <Link
-          to="contact" // Matches the id of the section
+          to="contact"
           smooth={true}
           duration={500}
           className="cursor-pointer hover:text-blue-400 transition duration-300"
+        >
+          Contact Us
+        </Link>
+      </div>
+
+      {/* Mobile Navigation Links */}
+      <div
+        className={`${
+          isOpen ? "block" : "hidden"
+        } absolute top-16 left-0 w-full bg-gray-800 p-4 md:hidden flex flex-col items-center space-y-4 text-white z-50`}
+      >
+        <NavLink
+          to="/"
+          exact
+          className="hover:text-blue-400 transition duration-300"
+          onClick={toggleMenu}
+        >
+          Home
+        </NavLink>
+        <NavLink
+          to="/execom"
+          className="hover:text-blue-400 transition duration-300"
+          onClick={toggleMenu}
+        >
+          Execom
+        </NavLink>
+        <NavLink
+          to="/events"
+          className="hover:text-blue-400 transition duration-300"
+          onClick={toggleMenu}
+        >
+          Events
+        </NavLink>
+        <Link
+          to="about"
+          smooth={true}
+          duration={500}
+          className="cursor-pointer hover:text-blue-400 transition duration-300"
+          onClick={toggleMenu}
+        >
+          About
+        </Link>
+        <Link
+          to="contact"
+          smooth={true}
+          duration={500}
+          className="cursor-pointer hover:text-blue-400 transition duration-300"
+          onClick={toggleMenu}
         >
           Contact Us
         </Link>
